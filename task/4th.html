@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+	<style type="text/css">
+body{
+	background: url('4.jpg');
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+}
+#container{
+	width: 40%;
+	text-align: center;
+    margin-left: 421px;
+    margin-top: 130px;
+    padding: 40px;
+}
+.array{
+	margin-top: 20px;
+    margin-left: 26px;
+}
+.btn{
+	margin-left: 20px;
+	padding: 6px;
+    border-radius: none;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">Validation</h1><hr>
+<div id="container">
+<form name="lakshmi" method="post">
+Enter Your Name: <input type="text" name="Name" id="name" class="array"><br>
+Enter Your Email: <input type="text" name="EMail" id="name" class="array"><br>
+Enter Your Mobile number: <input type="text" name="phno" id="phno" class="array"><br>
+<select name="country" class="array"><br>
+	<option value="-1" selected>Choose your country</option>
+	<option value="1">India</option>
+	<option value="1">Australia</option>
+	<option value="1">England</option>
+	<option value="1">West Indies</option>
+	<option value="1">Newzealand</option>
+	<option value="1">America</option>
+	<option value="1">Egypt</option>
+	<option value="1">Canada</option>
+</select>
+<input type="submit" value="submit" name="submit" id="submit" class=".btn" onclick="check();">
+<input type="reset" value="reset" class="btn">
+</form>
+</div>
+<script type="text/javascript">
+   function check()
+      {
+
+         if(document.lakshmi.Name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.lakshmi.Name.focus() ;
+            return false;
+         }
+
+         if(document.lakshmi.EMail.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.lakshmi.EMail.focus() ;
+            return false;
+         }
+
+         if(document.lakshmi.phno.value == "" ||
+         document.lakshmi.phno.value.length != 10 )
+         {
+            alert( "Make sure format is 9445293444 something like this" );
+            document.lakshmi.phno.focus() ;
+            return false;
+         }
+
+         if( document.lakshmi.country.value == "-1" )
+         {
+            alert( "Please provide your country!" );
+            return false;
+         }
+
+         alert("success");
+
+         return( true );
+        }
+</script>
+</body>
+</html>

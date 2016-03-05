@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+	body{
+	background: url('4.jpg');
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+}
+#container{
+	width: 40%;
+	text-align: center;
+    margin-left: 421px;
+    margin-top: 130px;
+}
+</style>
+</head>
+<body><h1 style="text-align:center;">Calculation</h1><hr>
+<div id="container">
+<form name="lakshmi">
+Enter First Number:<input type="text" name="a1st" id="a1st"><br>
+Enter Second Number:<input type="text" name="b2nd" id="b2nd"><br>
+<button type="button" onclick="Add()">Addition</button>
+<button type="button" onclick="Sub()">Subtraction</button>
+<button type="button" onclick="Mul()">Multiplication</button>
+<button type="button" onclick="Div()">Division</button>
+<button type="button" onclick="Mod()">Modulus</button></form>
+<div id="result">Result:</div></div>
+<script type="text/javascript">
+
+		function Add(){
+			var a = document.getElementById('a1st').value;
+			var b = document.getElementById('b2nd').value;
+			var c =  +a + +b;
+			document.getElementById('result').innerHTML = c;
+			}
+		function Sub(){
+			var a = document.getElementById('a1st').value;
+			var b = document.getElementById('b2nd').value;
+			var c =  a-b;
+			document.getElementById('result').innerHTML = c;
+		}
+		function Mul(){
+			var a = document.getElementById('a1st').value;
+			var b = document.getElementById('b2nd').value;
+			var c =  a*b;
+			document.getElementById('result').innerHTML = c;
+			}
+		function Div(){
+			var a = document.getElementById('a1st').value;
+			var b = document.getElementById('b2nd').value;
+			var c =  a/b;
+			document.getElementById('result').innerHTML = c;
+		}
+		function Mod(){
+			var a = document.getElementById('a1st').value;
+			var b = document.getElementById('b2nd').value;
+			var c =  a%b;
+			document.getElementById('result').innerHTML = c;
+		}
+
+
+		</script>
+
+
+</body>
+</html>

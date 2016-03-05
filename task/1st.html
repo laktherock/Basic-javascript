@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User input show</title>
+	<style type="text/css">
+	body{
+	background: url('4.jpg');
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+}
+#container{
+	width: 40%;
+	text-align: center;
+    margin-left: 421px;
+    margin-top: 130px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">User Input Show</h1><hr>
+<div id="container">
+<form name="lakshmi">
+Email: <input type="text" id="email" name="email"><br>
+Password: <input type="text" id="pass" name="pass"><br>
+<button type="button" onclick="show()">Show Below</button></form>
+<div id="display"></div>
+<div id="display1"></div>
+</div>
+<script type="text/javascript">
+
+
+	function show(){
+	
+		var a = document.getElementById('email').value;
+		var b = document.getElementById('pass').value;
+		document.getElementById('display').innerHTML= a;
+		document.getElementById('display1').innerHTML= b;
+
+	}
+
+</script>
+</body>
+</html>

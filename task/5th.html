@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Switch Statements</title>
+	<style type="text/css">
+	body{
+	background: url('4.jpg');
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+}
+#container{
+	width: 40%;
+	text-align: center;
+    margin-left: 421px;
+    margin-top: 130px;
+}
+</style>
+</head>
+<body><h1 style="text-align:center;">Switch</h1>
+<div id="container">
+	<input type= "text" placeholder= "enter number" name="hi" class= "hi">
+		<input type ="submit" onclick= "switchstat();" value="submit">
+<p id="demo"></p></div>
+<script type="text/javascript">
+
+function switchstat(){
+var price= document.getElementsByName('hi').value;
+	switch(price)
+	{
+		case 1:
+		document.write("Chocolate");
+		break;
+		case 2:
+		document.write("Cake");
+		break;
+		case 3:
+		document.write("Bread");
+		break;
+		case 4:
+		document.write("Coffee");
+		break;
+		case 5:
+		document.write("Tea");
+		break;
+		case 6:
+		document.write("Sandwich");
+		break;
+		case 7:
+		document.write("Juice");
+		break;
+		case 8:
+		document.write("Rice");
+		break;
+		default:
+		document.write("Nothing available");
+	}
+document.getElementById('demo').innerHTML =  price;
+}
+
+
+
+</script>
+</body>
+</html>
